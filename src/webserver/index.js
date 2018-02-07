@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const graphqlHTTP = require('express-graphql');
 const { default: schema } = require('./schema');
@@ -10,6 +11,8 @@ const db = {
     name: `News number ${i + 1}`,
   })),
 }
+
+app.use(cors());
 
 app.use('/graphql', graphqlHTTP({
   schema,
