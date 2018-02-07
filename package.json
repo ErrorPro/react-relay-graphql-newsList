@@ -1,0 +1,36 @@
+{
+  "name": "react-relay-graphql-newslist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-schema": "babel-node ./scripts/buildschema",
+    "server": "babel-node ./src/webserver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErrorPro/react-relay-graphql-newsList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErrorPro/react-relay-graphql-newsList/issues"
+  },
+  "homepage": "https://github.com/ErrorPro/react-relay-graphql-newsList#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.12.3",
+    "graphql-relay": "^0.5.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-relay": "^1.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1"
+  }
+}
