@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-schema": "babel-node ./scripts/buildschema",
+    "build": "webpack --config ./webpack.config.js -p",
     "relay": "relay-compiler --src ./src/frontend --schema ./src/schema.json",
     "server": "babel-node ./src/webserver",
     "start": "webpack-dev-server --config ./webpack.config.js --hot --contentBase public"
@@ -45,6 +46,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-plugin-relay": "^1.4.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^1.9.0",
