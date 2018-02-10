@@ -8,10 +8,10 @@ const { default: schema } = require('./schema');
 const port = process.env.port || 3000;
 
 const db = {
-  news: new Array(100).fill().map((e, i) => ({
+  news: Promise.resolve(new Array(100).fill().map((e, i) => ({
     id: i + 1,
-    name: `News number ${i + 1}`,
-  })),
+    name: `News title ${i + 1}`,
+  }))),
 };
 
 // For production, if we want to serve static files with Node.js we will have to serve static files here

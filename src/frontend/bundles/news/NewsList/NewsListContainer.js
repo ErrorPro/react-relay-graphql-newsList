@@ -11,6 +11,8 @@ import NewsList from './NewsList';
 import { NewsListItemContainer } from '../NewsListItem';
 import styles from './styles';
 
+// We can also use paginagion here.
+
 export default compose(
   queryRenderer(graphql`
     query NewsListContainerQuery {
