@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { setEnviroment } from 'relay-compose';
 
-import relayEnv from './createRelayEnv'
+import relayEnv from './createRelayEnv';
 import { NewsListContainer } from './bundles/news/NewsList';
 
 setEnviroment(relayEnv);
@@ -12,5 +12,5 @@ setEnviroment(relayEnv);
 
 render(
   <NewsListContainer />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

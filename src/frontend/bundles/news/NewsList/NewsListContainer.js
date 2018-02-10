@@ -25,7 +25,7 @@ export default compose(
     }
   `),
   mapProps(props => ({
-    newsItems: props.news.edges.map(({ node }) => <NewsListItemContainer key={node.id} data={node} />)
+    newsItems: props.news.edges.map(({ node }) => <NewsListItemContainer key={node.id} data={node} />),
   })),
   injectSheet(styles),
 )(NewsList);

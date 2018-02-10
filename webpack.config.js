@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: './src/frontend/index.js',
   output: {
-    path: path.join(__dirname + 'dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
   },
   resolve: {
@@ -26,6 +26,5 @@ module.exports = {
     }),
   ].concat(process.env.NODE_ENV === 'production'
     ? [new webpack.optimize.UglifyJsPlugin()]
-    : []
-  ),
-}
+    : []),
+};

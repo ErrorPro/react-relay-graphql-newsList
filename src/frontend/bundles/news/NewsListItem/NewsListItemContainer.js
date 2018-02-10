@@ -2,10 +2,11 @@ import {
   graphql,
 } from 'react-relay';
 import { compose } from 'redux';
-import { mapProps } from 'recompose';
 import { fragment } from 'relay-compose';
+import injectSheet from 'react-jss';
 
 import NewsListItem from './NewsListItem';
+import styles from './styles';
 
 export default compose(
   fragment(graphql`
@@ -14,4 +15,5 @@ export default compose(
       name
     }
   `),
+  injectSheet(styles),
 )(NewsListItem);
