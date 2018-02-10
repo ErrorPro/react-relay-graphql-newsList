@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 7e60382c42066e166e38b88b7df454dd
+ * @relayHash f38b85b22a46fa6055d8900951a4a2a7
  */
 
 /* eslint-disable */
@@ -14,7 +14,6 @@ export type NewsListContainerQueryResponse = {|
     +edges: ?$ReadOnlyArray<?{|
       +node: ?{|
         +id: string;
-        +name: ?string;
       |};
     |}>;
   |};
@@ -28,10 +27,15 @@ query NewsListContainerQuery {
     edges {
       node {
         id
-        name
+        ...NewsListItemContainerFragment
       }
     }
   }
+}
+
+fragment NewsListItemContainerFragment on News {
+  id
+  name
 }
 */
 
@@ -81,11 +85,9 @@ const batch /*: ConcreteBatch*/ = {
                     "storageKey": null
                   },
                   {
-                    "kind": "ScalarField",
-                    "alias": null,
-                    "args": null,
-                    "name": "name",
-                    "storageKey": null
+                    "kind": "FragmentSpread",
+                    "name": "NewsListItemContainerFragment",
+                    "args": null
                   }
                 ],
                 "storageKey": null
@@ -165,7 +167,7 @@ const batch /*: ConcreteBatch*/ = {
       }
     ]
   },
-  "text": "query NewsListContainerQuery {\n  news(first: 10) {\n    edges {\n      node {\n        id\n        name\n      }\n    }\n  }\n}\n"
+  "text": "query NewsListContainerQuery {\n  news(first: 10) {\n    edges {\n      node {\n        id\n        ...NewsListItemContainerFragment\n      }\n    }\n  }\n}\n\nfragment NewsListItemContainerFragment on News {\n  id\n  name\n}\n"
 };
 
 module.exports = batch;

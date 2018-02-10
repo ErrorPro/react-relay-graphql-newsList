@@ -7,6 +7,11 @@ module.exports = {
     path: path.join(__dirname + 'dist'),
     filename: 'bundle.js',
   },
+  resolve: {
+    alias: {
+      frontend: path.join(__dirname, 'src', 'frontend'),
+    },
+  },
   module: {
     rules: [
       {

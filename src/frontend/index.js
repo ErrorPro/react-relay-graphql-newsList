@@ -7,7 +7,7 @@ import { NewsListContainer } from './bundles/news/NewsList';
 
 setEnviroment(relayEnv);
 
-// We can use redux Provider to wrap out app by redux stor, also we need to create store here and dispatch initial actions or sagas.
+// We can use redux Provider to wrap our app by redux store, also we need to create store here and dispatch initial actions or sagas.
 // But I am using relay to keep my business data, so I dont need redux.
 
 render(
